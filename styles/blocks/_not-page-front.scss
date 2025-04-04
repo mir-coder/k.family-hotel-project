@@ -1,0 +1,11 @@
+@use '../helpers' as *;
+
+.page-not-front{
+    .header{
+        box-shadow: var( --shadow);
+    }
+
+    main{
+        padding-block: fluid(60, 40);
+    }
+}

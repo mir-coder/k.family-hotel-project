@@ -1,0 +1,41 @@
+@use '../helpers' as *;
+
+.section-additionally{
+    &__items{
+        padding-bottom: rem(30);
+    }
+
+    &__item{
+        border-radius: rem(6);
+        overflow: hidden;
+        position: relative; 
+
+        &::before{
+            content: '';
+            position: absolute;
+            // background: linear-gradient(180deg, rgba(0, 13, 68, 0) 0%, rgba(0, 13, 68, 1) 100%);
+            background: linear-gradient(180deg, rgba(87,153,215,0) 0%, rgba(87,153,215,1) 100%);
+            opacity: 0.7;
+            inset: 0;
+        }
+    }
+
+    &__info{
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: rem(50);
+
+    }
+
+    &__title{
+        color: var(--color-light);
+        text-align: center;
+        font-weight: 700;
+    }
+
+    .swiper-pagination {
+        position: relative;
+        bottom: 0;
+    }
+}

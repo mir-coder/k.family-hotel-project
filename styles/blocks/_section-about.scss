@@ -1,0 +1,37 @@
+@use '../helpers' as *;
+
+.section-about{
+    &__inner{
+        justify-content: space-between;
+        align-items: center;
+
+        @include mobile{
+            flex-direction: column;
+            row-gap: rem(30);
+        }
+    }
+
+    &__image{
+        max-width: rem(500);
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        @include tablet{
+            max-width: rem(240);
+        }
+    }
+
+    &__content{
+        width: 100%;
+
+        ul{
+            li{
+                color: var(--color-gray);
+                font-weight: 300;
+                font-style: italic;
+            }
+        }
+    }
+}

@@ -1,0 +1,50 @@
+@use 'normalize';
+@use 'fonts';
+@use 'variables';
+@use 'utils';
+@use 'global';
+
+@use 'blocks/header';
+@use 'blocks/menu';
+@use 'blocks/footer';
+@use 'blocks/select';
+@use 'blocks/burger-button';
+@use 'blocks/button';
+@use 'blocks/soc1als';
+@use 'blocks/feedback-form';
+@use 'blocks/field';
+@use 'blocks/group-input';
+@use 'blocks/checkbox';
+@use 'blocks/circle';
+@use 'blocks/block-title';
+@use 'blocks/flex-block';
+@use 'blocks/wrap';
+@use 'blocks/benefit';
+@use 'blocks/card';
+@use 'blocks/swiper';
+@use 'blocks/accordion-group';
+@use 'blocks/accordion';
+@use 'blocks/map';
+@use 'blocks/reviews-block';
+@use 'blocks/not-page-front';
+
+@use 'blocks/section-banner';
+@use 'blocks/section-about';
+@use 'blocks/section-advantages';
+@use 'blocks/section-catalog';
+@use 'blocks/section-services';
+@use 'blocks/section-contacts';
+@use 'blocks/section-gallery';
+@use 'blocks/section-questions';
+@use 'blocks/section-additionally';
+@use 'blocks/section-reviews';
+@use 'blocks/section-rules';
+@use 'blocks/section-contacts-page';
+
+
+
+// .header,
+// main > *:not(:last-child),
+// .footer {
+//     display: none !important;
+// }

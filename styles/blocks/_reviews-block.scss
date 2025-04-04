@@ -1,0 +1,44 @@
+@use '../helpers' as *;
+
+.reviews-block{
+    &__items{
+       align-items: stretch;
+    }
+
+    &__item{
+        height: auto;
+        width: rem(390);
+        font-family: var(--font-family-accent);
+        background-color: var(--color-light);
+        padding: rem(45) rem(25) rem(35);
+        color: var(--color-dark);
+    }
+
+    &__info{
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: space-between;
+        row-gap: rem(15);
+        height: 100%;
+    }
+
+    &__title{
+        text-transform: uppercase;
+        color: var(--color-accent);
+        font-weight: 700;
+    }
+
+    &__descriptions{
+        font-size: rem(16);
+        font-weight: 500;
+        flex-grow: 1;          /* Это позволит описанию занимать оставшееся пространство */
+        overflow: hidden;      /* Скрываем переполнение */
+        text-overflow: ellipsis; /* Добавляем многоточие, если текст не помещается */
+        display: -webkit-box;  /* Для поддержки многоточия в старых браузерах */
+        line-clamp: 4;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 4; 
+        margin-top: auto;
+    }
+}

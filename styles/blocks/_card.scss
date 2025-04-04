@@ -1,0 +1,115 @@
+@use '../helpers' as *;
+
+.card{
+    max-width: rem(380);
+    width: 100%;
+    background-color: var(--color-light);
+    border-radius: rem(6);
+    box-shadow: var(--shadow);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+
+    @include tablet{
+        &:nth-child(2) ~ *{
+            display: none;
+        }
+    }
+
+    &__img{
+        width: 100%;
+        height: fluid(209, 150);
+        object-fit: cover;
+
+        @include mobile-s {
+            height: rem(209);
+        }
+    }
+
+    &__content{
+        padding: rem(30) rem(25);
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        row-gap: rem(16);
+        position: relative;
+    }
+
+    &__title{
+        text-transform: uppercase;
+        color: var(--color-accent);
+        padding-bottom: rem(12);
+        position: relative;
+
+        &::before{
+            content: '';
+            position: absolute;
+            background-color: var(--color-accent-20);
+            width: fluid(164, 100);
+            height: rem(1);
+            left: 0;
+            bottom: 0;
+        }
+    }
+
+    &__description{
+        font-family: var(--font-family-accent);
+        font-size: rem(14);
+        font-weight: 500;
+        flex-grow: 1;          /* Это позволит описанию занимать оставшееся пространство */
+        overflow: hidden;      /* Скрываем переполнение */
+        text-overflow: ellipsis; /* Добавляем многоточие, если текст не помещается */
+        display: -webkit-box;  /* Для поддержки многоточия в старых браузерах */
+        line-clamp: 5;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 5; /* Максимальное количество линий для текста */
+       
+    }
+
+    &__actions{
+        margin-top: auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center; 
+
+        @include mobile{
+            flex-direction: column-reverse;
+            align-items: start;
+            row-gap: rem(15);
+        }
+    }
+
+    &__link{
+        max-width: rem(185);
+        padding: rem(15);
+        font-size: rem(14);
+
+        @include laptop{
+            max-width: rem(145);
+        }
+
+        @include tablet{
+            max-width: rem(185);
+        }
+    }
+
+    &__price{
+        display: flex;
+        align-items: center;
+        font-family: var(--font-family-accent);
+        column-gap: rem(5);
+        font-size: rem(16);
+        font-weight: 700;
+        color: var(--color-accent);
+
+        p{
+            margin: 0;
+        }
+
+        span{
+            color: var(--color-gray-20);
+            font-weight: 300;
+        }
+    }
+}
+
